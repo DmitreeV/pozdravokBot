@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 import static ru.dmitreev.telegram.bot.pozdravokBot.service.Parser.parser;
 
-public class CongratulationsRepository {
+public class CongratulationsHbSistRepository {
+
     private final ArrayList<String> quoteList;
 
-    public CongratulationsRepository() {
+    public CongratulationsHbSistRepository() {
         quoteList = new ArrayList<>();
-        parser("https://pozdravim.net/s-dnem-rozhdeniya/mame/v-proze/",
+        parser("https://pozdravim.net/s-dnem-rozhdeniya/sestre/v-proze/",
                 "entry-summary entry-content", quoteList);
     }
 
@@ -18,3 +19,4 @@ public class CongratulationsRepository {
         return quoteList.get(randValue);
     }
 }
+

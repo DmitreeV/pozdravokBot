@@ -34,7 +34,9 @@ public class TelegramBot extends TelegramLongPollingBot {
     private CongratWeddingRep congratWeddingRep;
     private CongratWedAnniversaryRep congratWedAnniversaryRep;
     private CongratBirthChildRep congratBirthChildRep;
+    private CongratEasterRep congratEasterRep;
     private ReplyKeyboardMarkup replyKeyboardMarkup;
+
 
     public TelegramBot() {
         congratulationsHbMomRepository = new CongratulationsHbMomRepository();
@@ -47,6 +49,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         congratAnniversaryRep = new CongratAnniversaryRep();
         congratWedAnniversaryRep = new CongratWedAnniversaryRep();
         congratBirthChildRep = new CongratBirthChildRep();
+        congratEasterRep = new CongratEasterRep();
     }
 
     @Override
@@ -98,15 +101,17 @@ public class TelegramBot extends TelegramLongPollingBot {
 
         SendMessage message = new SendMessage();
         message.setChatId(String.valueOf(chatId));
-        message.setText("Предложены следующие события:");
+        message.setText("Предложены следующие события: \n" +
+                "Для генерации нового поздравления повторно нажмите на кнопку.");
 
         paramButton();
         List<KeyboardRow> keyboardRows = new ArrayList<>();
         KeyboardRow row = new KeyboardRow();
 
-        row.add("С днем рождения");
-        row.add("С юбилеем");
-        row.add("На свадьбу");
+        row.add("День рождения");
+        row.add("Юбилей");
+        row.add("Пасха");
+        row.add("Свадьба");
         keyboardRows.add(row);
 
         row = new KeyboardRow();
@@ -165,7 +170,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             case "Назад к категориям":
                 sendGetMessage(chatId);
                 break;
-            case "С днем рождения":
+            case "День рождения":
                 sendHBMessage(chatId);
                 break;
             case "Для мамы":
@@ -186,10 +191,13 @@ public class TelegramBot extends TelegramLongPollingBot {
             case "Для бабушки":
                 sendMessage(chatId, congratulationsHbGrandmaRepository.getRandCongratulations());
                 break;
-            case "С юбилеем":
+            case "Юбилей":
                 sendMessage(chatId, congratAnniversaryRep.getRandCongratulations());
                 break;
-            case "На свадьбу":
+            case "Пасха":
+                sendMessage(chatId, congratEasterRep.getRandCongratulations());
+                break;
+            case "Свадьба":
                 sendMessage(chatId, congratWeddingRep.getRandCongratulations());
                 break;
             case "Годовщина свадьбы":

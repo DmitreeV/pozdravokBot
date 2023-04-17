@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  server:
+    build: ./
+    container_name: pozdravokBot
+    ports:
+      - "8080:8080"

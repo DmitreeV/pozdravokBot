@@ -22,6 +22,7 @@ Telegram-бот для генерации поздравлений на выбр
 * Loombok
 * Maven
 * Jsoup
+* Docker
 
 ## Пример работы Бота
 
@@ -36,4 +37,5 @@ Telegram-бот для генерации поздравлений на выбр
 Приложение работает корректно в текущем виде при наличии:
 
 - установленный [JDK версии 11](https://docs.aws.amazon.com/corretto/),
+- установленный [Docker](https://www.docker.com/products/docker-desktop/).
 - сборка с использованием [Maven](https://maven.apache.org/).

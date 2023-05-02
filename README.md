@@ -28,6 +28,7 @@ Telegram-бот для генерации поздравлений на выбр
 
 <div class="img-div">
 <img src="https://github.com/DmitreeV/pozdravokBot/blob/main/screenshots/IMG_2038.jpg" width="250" height="470">
+<img src="https://github.com/DmitreeV/pozdravokBot/blob/main/screenshots/RPReplay_Final1683055584.gif" width="250" height="470">
 <img src="https://github.com/DmitreeV/pozdravokBot/blob/main/screenshots/IMG_2039.jpg" width="250" height="470">
 </div>
 
@@ -37,5 +38,5 @@ Telegram-бот для генерации поздравлений на выбр
 Приложение работает корректно в текущем виде при наличии:
 
 - установленный [JDK версии 11](https://docs.aws.amazon.com/corretto/),
-- установленный [Docker](https://www.docker.com/products/docker-desktop/).
+- установленный [Docker](https://www.docker.com/products/docker-desktop/),
 - сборка с использованием [Maven](https://maven.apache.org/).

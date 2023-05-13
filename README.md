@@ -28,7 +28,7 @@ Telegram-бот для генерации поздравлений на выбр
 
 <div class="img-div">
 <img src="https://github.com/DmitreeV/pozdravokBot/blob/main/screenshots/IMG_2038.jpg" width="250" height="470">
-<img src="https://github.com/DmitreeV/pozdravokBot/blob/main/screenshots/RPReplay_Final1683055584.gif" width="250" height="470">
+<img src="https://github.com/DmitreeV/pozdravokBot/blob/main/screenshots/002CF285-A3DC-4127-AAD1-2BD2AB3EFE88.gif" width="250" height="470">
 <img src="https://github.com/DmitreeV/pozdravokBot/blob/main/screenshots/IMG_2039.jpg" width="250" height="470">
 </div>
 
